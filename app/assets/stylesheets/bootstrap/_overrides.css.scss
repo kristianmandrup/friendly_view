@@ -1,0 +1,30 @@
+fieldset {
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;  
+
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;  
+}
+
+div.control-group {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;  
+  display: inline-block;
+}
+
+label,
+div.controls {
+  display: inline-block;
+}
+
+input.span2 {
+  width: 170px;
+}
+
+form.search {
+  margin:  2px;
+  padding: 2px;  
+}

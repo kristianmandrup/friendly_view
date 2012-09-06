@@ -1,0 +1,4 @@
+For now we use the Home icons or Apartment icon of map-markers
+
+# Place Searches return a list of nearby Places based on a user's location.
+# <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=true_or_false"></script>

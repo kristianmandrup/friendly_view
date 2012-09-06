@@ -1,0 +1,23 @@
+
+http://adam.heroku.com/past/2010/6/30/replace_cron_with_clockwork/
+
+An app-focused cron replacement, described in that post, can be fulfilled by a little hackery with a few available Ruby libraries (rufus-scheduler and resque-scheduler). But both of these libraries have weaknesses.
+
+BeanStalk + Stalker
+
+http://adam.heroku.com/past/2010/4/24/beanstalk_a_simple_and_fast_queueing_backend/
+
+Beanstalk, a job queueing backend inspired by Memcache. It’s simple, lightweight, and completely specialized on job queueing. They use it at PostRank to process millions of jobs a day, so it does perform at scale.
+
+---
+
+http://blog.leshill.org/blog/2011/04/03/using-resque-and-resque-scheduler-on-heroku.html
+
+Using Resque and Resque Scheduler on Heroku
+
+
+http://blog.leshill.org/blog/2010/11/02/heroku-environment-variables.html
+
+Heroku Environment Variables
+
+https://gist.github.com/974966

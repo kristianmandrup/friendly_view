@@ -1,0 +1,46 @@
+#side {
+
+  .data_item {
+    padding-top: 4px;
+    clear: left;  
+  }
+  
+  .icon {
+    float: left;
+  }
+
+  .text {
+    float: left;
+    padding-top: 6px;
+    padding-left: 8px;
+  }
+}
+
+#basic_info {
+  height: 136px;
+}
+
+#more_info {
+ height: 30px; 
+}
+
+#period {
+ height: 110px; 
+}
+
+
+.data_table {
+  display: table;
+
+  .data_row {
+    display: table-row;
+
+    .data_label {
+      display: table-cell;
+      width: 90%;
+    }
+    .data_value {
+      display: table-cell;
+    }
+  }
+} 

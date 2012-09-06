@@ -1,0 +1,55 @@
+Place Searches
+
+To find Places within a specified area, the Places library provides the search() method. This method returns an array of Places that meet the location criteria - either a LatLngBounds, or a LatLng object representing a center point, and a radius value around that point in which to search.
+
+The information returned can include establishments — such as restaurants, stores, and offices — as well as 'geocode' results, which indicate addresses, political areas such as towns and cities, and other points of interest.
+
+Place Search Requests
+
+Place Searches are initiated with a call to the PlacesService's search() method.
+
+service = new google.maps.places.PlacesService(map);
+service.search(request, callback);
+This method takes a request with the following fields:
+
+Either of:
+bounds, which must be a google.maps.LatLngBounds object defining the rectangle in which to search; or
+a location and radius; the former takes a google.maps.LatLng object, and the radius takes a simple integer, representing the circle's radius in meters. The maximum allowed radius is 50 000 meters.
+keyword (optional) — A term to be matched against all available fields, including but not limited to name, type, and address, as well as customer reviews and other third-party content.
+name (optional) — A term to be matched against the names of Places. Results will be restricted to those containing the passed name value. Note that a Place may have additional names associated with it, beyond its listed name. The API will try to match the passed name value against all of these names; as a result, Places may be returned in the results whose listed names do not match the search term, but whose associated names do.
+types (optional) — An array containing one or more of the supported types listed in the Google Places API: Supported Place Types list. The service will return results that match any of the specified types.
+You must also pass a callback method to search(), to handle the results object and a google.maps.places.PlacesServiceStatus response.
+
+---
+
+var map;
+var service;
+var infowindow;
+
+function initialize() {
+  var pyrmont = new google.maps.LatLng(-33.8665433,151.1956316);
+  
+  map = new google.maps.Map(document.getElementById('map'), {
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      center: pyrmont,
+      zoom: 15
+    });
+
+  var request = {
+    location: pyrmont,
+    radius: '500',
+    types: ['store']
+  };
+
+  service = new google.maps.places.PlacesService(map);
+  service.search(request, callback);
+}
+
+function callback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    for (var i = 0; i < results.length; i++) {
+      var place = results[i];
+      createMarker(results[i]); 
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@mixin base-caption() {
+  font-size: $medium-font px;
+  font-weight: bold;  
+}
+
+@mixin primary-caption() {
+  @include base-caption();
+  color: $primary-color;
+}
+
+@mixin normal-caption() {
+  @include base-caption();
+  color: $normal-color;
+}

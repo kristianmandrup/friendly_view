@@ -1,0 +1,3 @@
+https://devcenter.heroku.com/articles/rabbitmq
+
+There are a number of ways that messaging can be useful in the context of a Rails web application. See the Getting Started area on the main RabbitMQ web site for some ideas. In this tutorial, we’ll build a very simple application that uses RabbitMQ, focusing on the basics of connecting to the RabbitMQ service. Once you understand that, you will be able to integrate more realistic uses of the service into your Rails applications on Heroku.

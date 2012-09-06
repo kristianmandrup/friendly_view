@@ -1,0 +1,55 @@
+.ui-widget-header {
+	background: #EB8F00 !important;
+}
+
+label.widget {
+  display: block;
+  float: left;
+  width: 80px;	
+}
+
+ul.form li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+select.slider {
+	display: none;
+}
+
+input.slider {
+	border: 0; 
+	color: #f6931f; 
+	font-weight: bold;
+}
+
+.slider-range {
+  width: 260px;
+  margin: 15;
+  top: -16px;
+  left: 220px;  
+}
+
+.ui-widget-content .ui-slider-handle.ui-state-hover {
+  background: white !important;
+  border: 1px solid #FBD850 !important;
+  color: #EB8F00 !important;
+}
+
+a#handle_rooms_to .ui-slider-tooltip,
+a#handle_rooms_from .ui-slider-tooltip {
+  width: 1em !important;
+  margin-left: 0;
+}
+
+.ui-slider {
+  width: 260px;
+  margin: 15;
+  top: -26px;
+  left: 220px;  
+}
+
+label.slider {
+  width: 100px;
+}

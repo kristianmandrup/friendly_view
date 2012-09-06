@@ -1,0 +1,12 @@
+.property {
+  width: 220px;
+  margin: 10px;
+  float: left;
+}
+
+#list {
+  #ad {
+    @import 'property/ad';
+  }
+}
+

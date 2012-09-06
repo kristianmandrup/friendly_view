@@ -1,0 +1,18 @@
+# //= require ui.select_slider.jquery
+
+# //= require chosen.jquery
+
+# //= require gmaps4rails/bing
+# //= require gmaps4rails/googlemaps
+# //= require gmaps4rails/mapquest
+# //= require gmaps4rails/openlayers
+# //= require gmaps4rails/all_apis
+
+# //= require twitter/bootstrap
+
+# //= require i18n
+# //= require i18n/translations
+
+//= require jquery.tools.min
+
+//= require world_flags/url_helper

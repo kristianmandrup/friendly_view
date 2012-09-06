@@ -1,0 +1,11 @@
+div#bar {
+  background-color: $normal-color;  
+  height: 24px;
+  padding-left: 6px;
+  padding-right: 6px;
+
+  .copyright, .follow {
+    font-size: $small-font px; 
+    color: $light-color;  
+  }
+}

@@ -1,0 +1,6 @@
+!!! 5
+%html{:lang => "en"}
+  = render 'email/head'
+  %body
+    = yield
+    = render '/mailer/footer'

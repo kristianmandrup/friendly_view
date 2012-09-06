@@ -1,0 +1,16 @@
+$copyright-year: unquote("2012");
+$company-name: unquote("Rent machine");
+/*!
+  Copyright © #{$copyright-year}, #{$company-name}
+  All Rights Reserved.
+*/
+
+@import 'bourbon';
+@import 'compass';
+
+/* Bootstrap */
+@import 'bootstrap/config';
+
+/* Icons */
+@import 'icons';
+

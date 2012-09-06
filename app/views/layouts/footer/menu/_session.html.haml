@@ -1,0 +1,4 @@
+%nav#session 
+  %ul
+    %li
+      = decorator(:user).session_presenter.decorate(current_user).present

@@ -1,0 +1,18 @@
+.dark
+  = render '/home/search_form'
+
+/ See: https://github.com/desandro/masonry
+
+%ul.thumbnails.ads
+  - 5.times do
+    = render '/home/ad'
+
+%ul.thumbnails.ads
+  - 5.times do
+    = render '/home/ad'
+
+/ for Masonry
+/ #properties
+/   .property
+/   .property
+/   .property

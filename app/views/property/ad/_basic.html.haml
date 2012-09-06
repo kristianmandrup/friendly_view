@@ -1,0 +1,21 @@
+%div{:class => "property ad #{type}" }
+  %header
+    %h1
+      = lorem_ipsum '3w'
+  %content
+    .thumbnail
+      = imageset_tag "property/#{rand(6)+1}.png", alt: 'A nice property'
+    %ul.data
+      %li.type
+        = "#{20 + rand(10) * 10} m2 apartment on #{rand(4)}th floor"
+      %li.rooms
+        = "#{rand(4)+1}/1 Furnished rooms"
+      %li.location
+        Valby, Copenhagen, DK
+      %li.period
+        12/5/2012 - 12/5/2013
+  %footer
+    .price
+      = "#{2000 + rand(4) * 1200} DKK"
+    .rating
+      .rateit{:'data-rateit-value' => rand(5), :'data-rateit-ispreset' => 'true', :'data-rateit-min' => '0', :'data-rateit-max' => '5'}

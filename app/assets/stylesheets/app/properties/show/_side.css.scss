@@ -1,0 +1,26 @@
+@import 'app/properties/show/side/costs';
+@import 'app/properties/show/side/basic_info';
+
+// property details and similar properties
+#side {
+  float: left;
+  width : 236px;
+
+  #details {
+    #costs {
+    }
+
+    #basics {
+    }
+
+    #period {
+    }
+
+    #more {
+      
+    }
+  }
+
+  #similar_properties {
+  }
+}  

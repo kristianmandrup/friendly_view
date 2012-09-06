@@ -1,0 +1,11 @@
+group :test do
+  gem 'rspec-rails',  '>= 2.8.1'
+  gem 'capybara',     '>= 1.1.2'
+  # gem 'capybara-webkit'
+
+  # spec notifications
+  # gem 'rb-fsevent',   '>= 0.4.3.1', :require => false
+  gem 'growl',        '>= 1.0.3'
+
+   # git: 'git://github.com/kristianmandrup/rspec-apotomo.git'
+end

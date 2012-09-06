@@ -1,0 +1,16 @@
+Usage:
+
+rails g bootstrap:install
+Layout (generates Twitter Bootstrap compatible layout) - (Haml and Slim supported)
+
+Usage:
+
+rails g bootstrap:layout [LAYOUT_NAME] [*ﬁxed or ﬂuid]
+Example:
+
+rails g bootstrap:layout application fixed
+Themed (generates Twitter Bootstrap compatible scaffold views.) - (Haml and Slim supported)
+
+Usage:
+
+rails g bootstrap:themed [RESOURCE_NAME]

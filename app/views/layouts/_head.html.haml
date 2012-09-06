@@ -1,0 +1,8 @@
+%head
+  %meta{:charset => "utf-8"}/
+  %title= content_for?(:title) ? yield(:title) : t('friendlyrent.title') || 'Friendly Rent'
+  = flexie_script # from flexlayout-rails
+  = html5_script
+  = stylesheet_link_tag "application", :media => "all"
+  = render partial: 'layouts/head/meta'
+

@@ -1,0 +1,31 @@
+#communication {
+  width: 236px;
+
+  .photo {
+    width: 196px;
+    height: 196px;
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+
+  .action {
+    margin-top: 10px;
+    text-align: center;
+
+    .btn {
+      width: 176px;
+    }
+  }
+
+  .contact {
+    height: 40px; 
+  }
+
+  .easyPieChart {
+    padding-left: 28px;
+    
+    canvas {
+      left: 28px;
+    }
+  }
+}

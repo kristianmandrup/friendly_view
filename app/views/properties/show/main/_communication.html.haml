@@ -1,0 +1,3 @@
+#communication.column
+  - [:profile, :contact_requests, :social, :favorite, :priority_subscription, :free_subscription, :comments].each do |name|
+    = render partial: "properties/show/main/communication/#{name}"

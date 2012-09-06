@@ -1,0 +1,22 @@
+da:
+  properties:
+    search:
+      form:
+        location:
+          prompt: where are you moving
+        type:
+          prompt: type
+        rooms:
+          prompt: 'how many rooms'
+        period:
+          prompt: 'for how long'          
+        furnish:
+          prompt: 'furnished or not'
+        size:
+          prompt: 'how large'
+        cost:
+          prompt: 'how expensive'
+        distance:
+          prompt: 'how far away'
+  friendlyrent:
+    title: Friendly Rent

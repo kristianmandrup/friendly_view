@@ -1,0 +1,6 @@
+da:
+  settings:
+    locale:
+      prompt: language
+    currency:
+      prompt: currency

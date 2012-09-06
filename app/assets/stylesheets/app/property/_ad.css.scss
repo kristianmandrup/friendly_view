@@ -1,0 +1,37 @@
+.property.add {
+  padding: 4px;
+
+  header {
+    h1 {
+      font-size: $large-font;
+      font-weight: bold;
+      color: gray;
+      margin-top: 6px;
+      margin-bottom: 6px;
+    }    
+  }
+
+  .content {
+    ul.data {
+      @include vbox();
+
+      list-style-type: none;
+      margin-left: 0px;
+      margin-bottom: 6px;
+
+      li {
+        @include flex-box();
+      }
+    }    
+  }
+
+  footer {    
+    @include flex-box();
+    .price {
+      @include caption-text();
+    }
+    .rating {
+      text-align: right;
+    }
+  }
+}

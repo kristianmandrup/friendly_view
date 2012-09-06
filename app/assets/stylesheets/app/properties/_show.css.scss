@@ -1,0 +1,36 @@
+@import 'app/properties/show/main';
+@import 'app/properties/show/side';
+
+body {
+  #main_wrapper {
+    background-color: silver;  
+  }
+}
+
+#property {
+  .show {
+  }
+
+  .actions {
+  }
+
+  .subcolumn {
+    float: left;
+  }
+
+  .column {
+    background-color: blue;
+  }
+
+  .property.island {
+    min-height: 300px;
+  }
+
+  .island {
+    padding: 15px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background-color: white;
+  }
+}
+  

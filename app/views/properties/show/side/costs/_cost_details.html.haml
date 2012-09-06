@@ -1,0 +1,17 @@
+#cost_details.collapsed
+  #monthly_costs
+    .subtitle
+      Monthly costs
+    - [:rent, :utilities, :media].each do |name|
+      = render partial: "properties/show/side/costs/cost_data", locals: {name: name}
+
+  #one_time_costs
+    .subtitle
+      One time costs
+    - [:deposit, :upfront].each do |name|
+      = render partial: "properties/show/side/costs/cost_data", locals: {name: name}
+
+  #entrance_cost
+    .subtitle
+      Entrance cost
+    = render partial: "properties/show/side/costs/cost_data", locals: {name: 'total'}

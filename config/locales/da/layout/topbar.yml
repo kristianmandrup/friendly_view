@@ -1,0 +1,11 @@
+da:
+  topbar:
+    logo:
+      label: Friendlyrent
+    search:
+      label: Søg
+    login:
+      label: Log ind
+    logout:
+      label: Log ud
+

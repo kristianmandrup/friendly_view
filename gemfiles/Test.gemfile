@@ -1,0 +1,33 @@
+group :test do
+  gem 'rspec-rails',  '>= 2.8.1'
+  gem 'capybara',     '>= 1.1.2'
+  # gem 'capybara-webkit'
+
+  # spec notifications
+  # gem 'rb-fsevent',   '>= 0.4.3.1', :require => false
+  gem 'growl',        '>= 1.0.3'
+
+  gem 'rspec-apotomo',      git: 'git://github.com/kristianmandrup/rspec-apotomo.git'
+
+  gem 'wirble',             :require => false   # Saved irb history, colors etc.
+  gem 'awesome_print',      :require => false   # Like Pretty Print but more awesome
+  # gem 'interactive_editor', :require => false   # Edit irb commands in a real editor
+  
+  # time travel
+  gem 'timecop',  '~> 0.3.5', :git => 'git://github.com/change/timecop.git'
+  gem 'delorean', '~> 1.1.1'
+
+  # gem 'json_expressions' # for testing JSON APIs
+
+  gem 'cutter',   '~> 0.8.2'
+
+  # gem 'fakeweb'
+
+  gem 'launchy'                   
+  # gem 'remarkable_mongoid'
+
+  gem 'shoulda'         
+  gem 'shoulda-matchers'
+
+  gem 'spork-rails', '~> 3.2.0'
+end 

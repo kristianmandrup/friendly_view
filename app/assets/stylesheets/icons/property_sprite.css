@@ -1,0 +1,81 @@
+.property-sprite {
+    background: url(/assets/property/property_sprite.png) no-repeat;
+}
+
+.property-sprite .bedrooms {
+    width: 32px;
+    height: 32px;
+    background-position: -129px -86px;
+}
+
+.property-sprite .floor {
+    width: 32px;
+    height: 32px;
+    background-position: -129px -43px;
+}
+
+.property-sprite .m2 {
+    width: 32px;
+    height: 32px;
+    background-position: -135px -0px;
+}
+
+.property-sprite .money {
+    width: 26px;
+    height: 26px;
+    background-position: -0px -129px;
+}
+
+.property-sprite .money_coins {
+    width: 32px;
+    height: 32px;
+    background-position: -86px -86px;
+}
+
+.property-sprite .more_comments_users {
+    width: 32px;
+    height: 32px;
+    background-position: -43px -86px;
+}
+
+.property-sprite .more_three_dots {
+    width: 32px;
+    height: 32px;
+    background-position: -0px -86px;
+}
+
+.property-sprite .period_end_arrow {
+    width: 35px;
+    height: 32px;
+    background-position: -46px -0px;
+}
+
+.property-sprite .period_start_arrow {
+    width: 35px;
+    height: 32px;
+    background-position: -0px -0px;
+}
+
+.property-sprite .plus_orange {
+    width: 32px;
+    height: 32px;
+    background-position: -86px -43px;
+}
+
+.property-sprite .rental_period {
+    width: 32px;
+    height: 32px;
+    background-position: -43px -43px;
+}
+
+.property-sprite .rooms {
+    width: 32px;
+    height: 32px;
+    background-position: -0px -43px;
+}
+
+.property-sprite .similar_properties_bullets {
+    width: 32px;
+    height: 32px;
+    background-position: -92px -0px;
+}

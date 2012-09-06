@@ -1,0 +1,14 @@
+/*
+BOOTSTRAP
+
+Simply define the value of the variable you want to change before importing Bootstrap. 
+Sass will respect your existing definition rather than overwriting it with the Bootstrap defaults. A list of customisable variables can be found in the Bootstrap documentation.
+*/
+@import 'compass_twitter_bootstrap_responsive';
+@import 'formtastic-bootstrap';
+@import 'bootstrap/overrides';
+
+/* Fonts */
+@import 'font-awesome';
+
+// @import 'ui-bootstrap/jquery-ui-bootstrap.latest';

@@ -1,0 +1,281 @@
+Elsticsearch:
+https://devcenter.heroku.com/articles/bonsai
+
+ElasticSearch is the latest generation search engine built on the powerful Lucene library. Its API is freshly designed around modern RESTful JSON conventions, making it easy to learn and understand. ElasticSearch will automatically index your JSON data with sensible defaults, which means that you can get started without writing a single line of configuration.
+
+-------
+
+https://devcenter.heroku.com/articles/scheduler
+
+Scheduler is an add-on for running jobs on your app at scheduled time intervals, much like cron in a traditional server environment.
+
+The scheduler add-on will run one-off processes that will count toward your dyno-hours for the month.
+A dashboard allows you to configure jobs to run every 10 minutes, every hour, or every day, at a specified time. When invoked, these jobs will run as one-off processes and show up in your logs as a process named run.N.
+
+$ heroku addons:add scheduler:standard
+
+----
+
+To use Hoptoad on Heroku, install the Hoptoad add-on:
+
+$ heroku addons:add hoptoad:basic # This adds the the basic plan.
+                                  # If you'd like another plan, specify that instead.
+
+-----------
+
+https://devcenter.heroku.com/articles/iron_worker
+
+IronWorker is a massively scalable task queue/job queue that makes it easy for you offload front end tasks, run background jobs, and process many tasks at once – all in the cloud and with no servers to set-up and manage. It can also function as a cron-in-the-cloud service, running tasks on a schedule you define.   
+
+$ heroku addons:add iron_worker:starter
+-----> Adding iron_worker to strong-mountain-405... done, v29 (free)
+
+https://addons.heroku.com/iron_worker
+
+Grande
+All starter features
+1440 Worker Hours/month
+
+$ heroku addons:add iron_worker:grande                               
+---
+
+Mailgun
+
+Unlike other cloud email providers, Mailgun offers a complete email service built for sending, receiving and storing email. In addition to the HTTP API, you can use the full suite of standard email protocols: SMTP, POP3 and IMAP.
+
+Deploying to Heroku
+
+To use Mailgun on Heroku, install the Mailgun add-on and select the Mailgun plan you want to use:
+
+$ heroku addons:add mailgun:<PLAN>
+
+---
+
+https://devcenter.heroku.com/tags/mongodb
+
+MongoHQ is a cloud-based hosted database solution that allows you to quickly and easily create and get your apps up and running with MongoDB. Through the MongoHQ add-on for Heroku, you can, with just a couple of steps, have a MongoDB instance running and available for your Heroku applications.
+
+----
+
+https://devcenter.heroku.com/articles/mongolab
+
+MongoLab is a cloud-based database provider that hosts MongoDB databases on various cloud providers, including EC2. It handles replication, backups, monitoring and uptime. Complete with easy-to-use web administration tools and developer APIs, MongoLab makes managing cloud databases and cloud data remarkably easy.
+
+Through the MongoLab add-on, Heroku users can instantly have MongoDB databases running on EC2 and available for their Heroku applications.
+
+$ heroku addons:add mongolab:starter
+
+---
+
+https://devcenter.heroku.com/articles/newrelic
+
+New Relic Application Performance Monitoring (APM) is an on-demand performance management solution for web applications. New Relic APM offers seamless integration with the Heroku platform enabling immediate and automatic access to APM’s comprehensive capabilities for monitoring, troubleshooting and tuning web applications.
+
+
+$ heroku addons:add newrelic:standard
+
+---
+
+Redis to go
+
+https://devcenter.heroku.com/articles/redistogo
+
+Setup the Redis connection information for development in config/environments/development.rb
+
+ENV["REDISTOGO_URL"] = 'redis://username:password@my.host:6789' 
+
+Configure Redis in config/initializers/redis.rb
+
+uri = URI.parse(ENV["REDISTOGO_URL"])
+REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+
+
+$ heroku addons:add redistogo
+
+$ heroku run console
+>> REDIS.set("answer", 42)
+"OK"
+>> REDIS.get("answer")
+42
+
+---
+
+https://addons.heroku.com/sendgrid
+
+Bronze $9.95 PER MONTH
+40,000 emails per month
+Basic deliverability features
+Advanced reporting & analytics
+SMTP Relay, SMTP API and Web API
+Premium support including phone support
+
+$ heroku addons:add sendgrid:starter
+Adding sendgrid:starter to myapp...done.
+
+$ heroku addons:add sendgrid:bronze
+Adding sendgridbronze to myapp...done.
+
+config/initializers/mail.rb
+
+ActionMailer::Base.smtp_settings = {
+  :address        => 'smtp.sendgrid.net',
+  :port           => '587',
+  :authentication => :plain,
+  :user_name      => ENV['SENDGRID_USERNAME'],
+  :password       => ENV['SENDGRID_PASSWORD'],
+  :domain         => 'heroku.com'
+}
+ActionMailer::Base.delivery_method = :smtp
+
+
+Pony:
+
+We encourage developers to take a look at Pony for something simpler than ActionMailer, yet more convenient than net/smtp.
+
+Pony.options = {
+  :via => :smtp,
+  :via_options => {
+    :address => 'smtp.sendgrid.net',
+    :port => '587',
+    :domain => 'heroku.com',
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
+}
+
+
+Mail:
+
+Mail.defaults do
+  delivery_method :smtp, {
+    :address => 'smtp.sendgrid.net',
+    :port => '587',
+    :domain => 'heroku.com',
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
+end
+
+--
+
+https://devcenter.heroku.com/articles/ssl
+
+SSL is a cryptographic protocol that provides end-to-end data encryption and data integrity for all web requests. Apps that transmit sensitive data should enable SSL to ensure all information is transmitted securely.
+
+---
+
+Websolr is a managed search service provided by Onemorecloud and powered by Apache Solr. The Websolr add-on allows you to use the high performance functionality of Solr in your application today.
+
+$ heroku addons:add websolr
+
+--
+
+Moonshado-SMS
+Moonshado is an SMS gateway. The Heroku Moonshado-SMS add-on provides an interface between the Moonshado-SMS gateway and your application to deliver SMS messages to any US cellular device.
+
+gem "moonshado-sms"
+
+Add this to your config/environments/development.rb and config/environments/test.rb:
+
+config.after_initialize do
+  Moonshado::Sms.configure do |config|
+    config.production_environment = false
+  end
+end
+Production Setup
+
+Add this to your config/environments/production.rb:
+
+config.after_initialize do
+  Moonshado::Sms.configure do |config|
+    config.api_key = ENV['MOONSHADOSMS_URL']
+  end
+end
+Keywords Setup:
+
+You can also register/update keywords. Keyword is required so the incoming SMS can be routed to your application based on the keyword at the beginning of the text message. Each app currently can register one keyword.
+
+Add this to your config/environments/production.rb:
+
+config.after_initialize do
+  Moonshado::Sms.configure do |config|
+    config.api_key = ENV['MOONSHADOSMS_URL']
+    config.keywords = {:bender => "http://planetexpress.com/sms/mo"}
+
+    # This will auto register keywords on application startup
+    config.auto_register_keywords = true
+  end
+end
+
+
+Submit SMS
+
+>> sms = Moonshado::Sms.new("15556345789", "test")
+=> #<Moonshado::Sms:0x1032b4900 @number="15556345789", @message="test">
+>> sms.deliver_sms
+=> {:stat=>"ok", :id=>"e3debdc7f4719ec0", :credit => 500}
+
+
+$ heroku addons:add moonshado-sms
+---
+
+Deploy hooks allow you to receive a notification whenever a new version of your app is pushed to Heroku. It’s useful to keep you and your team informed about deploys, while it can also be used to integrate different systems together.
+
+$ heroku addons:add deployhooks:email \
+    recipient=me@example.com \
+    subject="Myapp Deployed" \
+    body="{{user}} deployed app"
+Adding deployhooks:email to myapp...Done.
+
+$ heroku addons:add deployhooks:basecamp \
+    url=http://myaccount.basecamphq.com \
+    username=00000000 \
+    project=myapp \
+    category=deploys \
+    title="{{user}} deployed myapp" \
+    body="check it at {{url}}"
+Adding deployhooks:basecamp to myapp...Done.
+
+---
+
+CloudMailin allows you to receive incoming email messages in your web app via an HTTP POST request.
+
+When you install the CloudMailin Add-on you will be automatically given an email address to send email to. Any email sent to that address will automatically be forwarded to the web address of your choice.
+
+Getting Started on Heroku
+
+To get started simply install the CloudMailin Add-on using the following command:
+
+$ heroku addons:add cloudmailin
+This will automatically create you a CloudMailin account and create an address that will forward to the default location. Your CloudMailin email address will be stored in your Heroku Environment which can be obtained from your app by calling:
+
+reply_to = env['CLOUDMAILIN_FORWARD_ADDRESS']
+
+Rails 3
+
+Rails 3 already makes use of mail instead of using TMail that was default in Rails 2.x. In Rails 3 we just have to rails generate controller incoming_mails to generate our controller and add a create method.
+
+class IncomingMailsController < ApplicationController    
+  require 'mail'
+  skip_before_filter :verify_authenticity_token
+
+  def create
+    message = Mail.new(params[:message])
+    Rails.logger.log message.subject #print the subject to the logs
+    Rails.logger.log message.body.decoded #print the decoded body to the logs
+    Rails.logger.log message.attachments.first.inspect #inspect the first attachment
+
+    # Do some other stuff with the mail message
+
+    render :text => 'success', :status => 200 # a status of 404 would reject the mail
+  end
+end
+
+$ heroku addons:add cloudmailin
+
+---
+

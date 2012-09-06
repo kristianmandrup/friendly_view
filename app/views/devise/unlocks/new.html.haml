@@ -1,0 +1,15 @@
+%h2 Resend unlock instructions
+
+= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f|
+	= devise_error_messages!
+
+  %ul
+  	%li
+  		= f.label :email
+  	%br
+  		= f.email_field :email
+
+  	%li
+  		= f.submit "Resend unlock instructions"
+
+render "links"

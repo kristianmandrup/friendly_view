@@ -1,0 +1,42 @@
+#menu {
+  @include hbox();
+
+  background-color: $dark-color;
+  height: 48px; // for company logo
+  padding: 10px;
+
+  // login, logout
+  #session {
+    @include hbox();
+    @include flex-start();
+  }
+
+  #actions {
+    @include hbox();
+    @include flex-center();
+
+    .action {
+      @include flex-box();
+
+      padding-left: 36px; // make room for icon on left
+    }
+  }
+
+  // %ul.p30.pictos
+  //   %li.pic.info
+  //   %li.pic.settings
+  #settings {
+    @include hbox();
+    @include flex-end();
+
+    // menu bar pictos icons
+    ul.pictos {
+      list-style-type: none;
+      margin-left: 0px;
+
+      li {
+        @include flex-box();
+      }
+    }
+  }  
+}

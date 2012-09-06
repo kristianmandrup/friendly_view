@@ -1,0 +1,5 @@
+Fast mid-range production database perfect for most applications.
+Includes 2GB of storage.
+Daily Snapshot
+
+$ heroku addons:add mongohq:small

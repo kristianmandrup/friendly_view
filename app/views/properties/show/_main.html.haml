@@ -1,0 +1,6 @@
+#main.column
+  .upper
+    = render partial: 'properties/show/main/gallery'      
+  .lower
+    - [:communication, :description].each do |name|
+      = render partial: "properties/show/main/#{name}"

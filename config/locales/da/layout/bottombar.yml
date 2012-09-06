@@ -1,0 +1,15 @@
+da:
+  bottombar:
+    search_agents:
+      label: Agenter
+    property_map:
+      label: Kort
+    property_list:
+      label: Liste
+    faq:
+      label: FAQ
+    preferences:
+      label: Preæferencer
+    post_home:
+      label: Opret annonce
+

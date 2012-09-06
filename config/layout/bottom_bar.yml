@@ -1,0 +1,25 @@
+always:
+- preferences
+free:
+  - agents
+  - post home
+  - map/list
+  - favorites
+landlord:
+  - agents
+  - manage
+  - map/list
+  - favorites
+  manage:
+    - mail
+    - new home
+    - map/list
+  payment:
+    - faq
+tenant:
+  - agents
+  - manage
+  - map/list
+  - favorites
+  manage:
+    - mail

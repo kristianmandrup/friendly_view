@@ -1,0 +1,48 @@
+Your Own Domain
+
+You’ll likely want to use your own domain name for your app. The easiest way to set up your own domain with Heroku is to use the Zerigo DNS add-on. See Heroku’s article about setting up Zerigo DNS and Heroku’s article about custom domains for more information.
+
+Use Zerigo’s Nameservers
+Visit your domain registrar and set your domain’s nameserver records to point to Zerigo’s DNS servers:
+
+a.ns.zerigo.net
+b.ns.zerigo.net
+c.ns.zerigo.net
+d.ns.zerigo.net
+e.ns.zerigo.net
+Enable Custom Domains
+Use the command line to enable Heroku to use a custom domain for your app:
+
+$ heroku addons:add custom_domains:basic
+Enable the Zerigo DNS Add-on
+Use the command line to enable the Zerigo DNS add-on:
+
+$ heroku addons:add zerigo_dns:basic
+Set Your Domain Name
+With the Zerigo DNS add-on enabled, domain names added via the command line will automatically be added to Zerigo’s DNS servers. Updates happen instantly and Heroku keeps the DNS records up-to-date should Heroku change the IP addresses of its servers.
+
+This command tells Heroku that your app should respond to requests to “mydomain.com”:
+
+$ heroku domains:add mydomain.com
+As soon as DNS records propagate (usually a few minutes but sometimes longer), your app should be running at http://mydomain.com/.
+
+Using Subdomains
+You’ll need to enable “wildcard domains” if you want your application to accommodate arbitrary subdomains (for example, a different subdomain for each user account),
+
+$ heroku addons:add wildcard_domains
+
+$ heroku domains:add *.mydomain.com
+
+You can check that everything has been added correctly by running:
+
+$ heroku info --app myapp
+
+Troubleshooting
+When you get errors, troubleshoot by reviewing the log files:
+
+$ heroku logs
+
+Where to Get Help
+Your best source for help with Heroku is Stack Overflow. Your issue may have been encountered and addressed by others.
+
+You can also check the Heroku Dev Center or the Heroku Google Group.

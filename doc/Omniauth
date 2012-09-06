@@ -1,0 +1,11 @@
+If you run Omniauth_pure you will notice lines such as “WARNING: making https request to https://www.google.com/accounts/o8/id without verifying server certificate; no CA path was specified.” in your Terminal. This happens as we did not provide valid certificates in our configuration. Let’s fix this. First, you need a file named ca-bundle.crt to be put into the config directory of your application. For Omniauth_pure I took the file from http://certifie.com/ca-bundle.
+
+Rails Tutorial for OmniAuth with Mongoid
+by Daniel Kehoe
+Last updated 27 February 2012
+
+http://railsapps.github.com/tutorial-rails-mongoid-omniauth.html
+
+See also:
+
+http://www.communityguides.eu/articles/16
