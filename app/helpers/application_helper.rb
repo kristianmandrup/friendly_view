@@ -9,8 +9,4 @@ module ApplicationHelper
   def current_user
     session[:user] ||= User.new 'kmandrup'
   end
-
-  def search_decorator search
-    Decorators.decorator(:search).decorate(search)
-  end
 end

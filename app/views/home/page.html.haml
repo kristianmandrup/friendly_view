@@ -1,3 +1,5 @@
 / = render 'slideshow'
-= render 'properties/search/form'
+/ = render 'properties/search/form'
 / = render 'thumbnail_ads'
+= render_widget :cover
+/ = gmaps({ "map_options" => { :libraries => ["places"] } })

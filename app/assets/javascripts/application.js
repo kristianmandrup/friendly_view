@@ -11,14 +11,20 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require apotomo/namespaces.min
+
 //= require_tree .
 //= require jquery_ujs
-//= require jquery-ui
+//= require jquery.ui.all
 //= require clear_eyes
-//= require autocomplete-rails
+
 //= require hamlcoffee
 //= require masonry/jquery.masonry.min
 //= require rails.validations
+
+//= require autocomplete-rails
+
+//= require gmaps-autocomplete
 
 //= require gallery/responsive
 

@@ -2,8 +2,10 @@
 %html{:lang => "en"}
   = render partial: 'layouts/head'
   %body
-    #main_wrapper
+    #container_fluid
       = yield
 
   / Placed at the end of the document so the pages load faster
+  = gmaps_libs_now map_options: {provider: :google, :provider_key => 'AIzaSyAldHWZicBdBhSrd4xC2uh3cVIwEdWFfiY'}
+  = yield :scripts
   = javascript_include_tag "application"

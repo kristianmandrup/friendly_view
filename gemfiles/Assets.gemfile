@@ -4,7 +4,7 @@ group :assets do
   gem 'sass-rails', '~> 3.2'
 
   gem 'compass_twitter_bootstrap',           git: 'git://github.com/kristianmandrup/compass-twitter-bootstrap.git'
-  gem 'font_awesome-sass-rails', '~> 2.0.0', git: 'git://github.com/kristianmandrup/font_awesome-sass-rails.git'
+  gem 'font_awesome-sass-rails', '~> 2.0.0', path: '/Users/kmandrup/private/repos/font_awesome-sass-rails' # git: 'git://github.com/kristianmandrup/font_awesome-sass-rails.git'
 
   gem 'compass-rails', '~> 1.0.3'
 
@@ -17,6 +17,8 @@ group :assets do
 
   gem "twitter-bootstrap-rails", git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
   gem 'bourbon' # sass helpers
+
+  gem 'jquery-ui-rails'
 
   gem 'haml_coffee_assets'
   gem 'execjs'  
