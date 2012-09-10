@@ -1,0 +1,23 @@
+= widget_div do
+  .tabbable
+  %ul.nav.nav-tabs
+    %li.active
+      %a{href: "#photos" :"data-toggle" => "tab"}
+    %li
+      %a{href: "#description" :"data-toggle" => "tab"}
+    %li
+      %a{href: "#similar_properties" :"data-toggle" => "tab"}
+    %li
+      %a{href: "#data" :"data-toggle" => "tab"}
+    %li
+      %a{href: "#social" :"data-toggle" => "tab"}
+    %li
+      %a{href: "#period" :"data-toggle" => "tab"}
+
+  .tab-content
+    #photos.tab-pane.fade.active
+    #description
+    #similar_properties
+    #data
+    #social
+    #period

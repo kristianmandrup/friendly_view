@@ -1,9 +1,0 @@
-= widget_div do
-  = semantic_form_for @search, :url => url_for_event(:submit), :remote => true do |form|
-    .ui-widget
-      = form.input :location, :input_html =>{:id => 'gmaps-input-address'}, :placeholder => 'type place to search'
-    = form.inputs do
-      = @search_decorator.form(form).inputs_line 1
-    = form.inputs do
-      = @search_decorator.form(form).inputs_line 2
-

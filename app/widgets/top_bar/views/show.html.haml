@@ -1,0 +1,13 @@
+= widget_div do
+  = semantic_form_for @search, :url => url_for_event(:submit), :remote => true do |form|
+    = form.inputs do
+      = @search_decorator.form(form).location_input
+    = form.inputs do      
+      = @search_decorator.form(form).inputs_line 1
+      = @search_decorator.form(form).inputs_line 2
+
+    = form.inputs do
+      = @search_decorator.form(form).slider_rooms
+      = @search_decorator.form(form).slider_size
+    /   = @search_decorator.form(form).inputs_line 2
+

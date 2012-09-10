@@ -3,9 +3,9 @@ da:
     search:
       form:
         location:
-          prompt: where are you moving
+          prompt:  'where are you moving'
         type:
-          prompt: type
+          prompt: 'residence type'
         rooms:
           prompt: 'how many rooms'
         period:

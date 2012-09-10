@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $('#layerslider').layerSlider({
-    skinsPath : '/assets/layerslider/',
+    skinsPath : '/assets/plugins/layerslider/',
     skin : 'defaultskin'
   });
 

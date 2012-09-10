@@ -479,7 +479,7 @@
 			$(el).addClass('ls-'+ls.o.skin);
 
 			var skinStyle = ls.o.skinsPath+ls.o.skin+'/skin.css';
-			console.log('skinsPath', skinStyle)
+			// console.log('skinsPath', skinStyle)
 
 			if (document.createStyleSheet){
 				document.createStyleSheet(skinStyle);
@@ -1155,7 +1155,7 @@
 		navStartStop		: true,						// If false, Start and Stop buttons will be invisible.
 		navButtons			: true,						// If false, slide buttons will be invisible.
 		skin				: 'lightskin',				// You can change the skin of the Slider, use 'noskin' to hide skin and buttons. (Pre-defined skins are: 'deafultskin', 'lightskin', 'darkskin', 'glass' and 'minimal'.)
-		skinsPath			: '/layerslider/skins/',	// You can change the default path of the skins folder. Note, that you must use the slash at the end of the path.
+		skinsPath			: 'plugins/layerslider/skins/',	// You can change the default path of the skins folder. Note, that you must use the slash at the end of the path.
 		pauseOnHover		: true,						// SlideShow will pause when mouse pointer is over LayerSlider.
 
 		// NEW FEATURES v1.6 optional globalBGColor & globalBGImage

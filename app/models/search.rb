@@ -18,15 +18,15 @@ class Search
     end
 
     def furnish_select
-      ['1 week', '2 weeks', '1 month', '2 months']
+      ['furnished', 'non-furnished']
     end
 
     def size_select
-      ['10 m2', '20 m2', '30 m2']
+      ['10-20', '21-40', '40-60', '61-90', '91-130', '131-180', '181-250', '250+']
     end
 
     def cost_select
-      ['1000', '2000', '3000', '4000']
+      ['0-1000', '1001-2000', '2001-3000', '3001-5000', '5001-8000', '8001-12000', '12001-20000', '20000+']
     end
 
     def distance_select

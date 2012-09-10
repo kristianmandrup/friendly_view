@@ -6,6 +6,10 @@ fieldset {
   -webkit-box-align: center;
   -moz-box-align: center;
   box-align: center;  
+  border: none;
+
+  padding-bottom: 0px;
+  margin-bottom: 0px;  
 }
 
 div.control-group {
@@ -15,16 +19,16 @@ div.control-group {
   display: inline-block;
 }
 
+#new_search .ui-widget {
+  font-size: 0.8em;
+}
+
 label,
 div.controls {
   display: inline-block;
 }
 
-input.span2 {
-  width: 170px;
+input#search_location {
+  min-width: 20em;
 }
 
-form.search {
-  margin:  2px;
-  padding: 2px;  
-}

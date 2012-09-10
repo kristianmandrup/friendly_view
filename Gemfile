@@ -12,12 +12,11 @@ gem 'credit_card_icons',  '~> 0.1.0'
 
 gem 'easy_as_pie',        '>= 0.1.0'
 
-gem 'rails-gallery',      '~> 0.2.0'
+gem 'rails-gallery',      '~> 0.2.0', path: '/Users/kmandrup/private/repos/rails-gallery'
 
 gem 'partializer',        '~> 0.1.0'
 
-gem 'cells', path: '/Users/kmandrup/private/repos/cells'
-gem 'apotomo', '~> 1.2.3', path: '/Users/kmandrup/private/repos/apotomo' #  git: 'git://github.com/kristianmandrup/apotomo.git' 
+gem 'apotomo', '~> 1.2.3', path: '/Users/kmandrup/private/repos/apotomo' # git: 'git://github.com/kristianmandrup/apotomo.git' 
 
 gem "social-buttons",     '~> 0.3.0', require: 'social_buttons'
 
@@ -25,11 +24,11 @@ gem 'lorem_ipsum'
 
 gem "jquery-rails"
 
-gem 'gmaps-autocomplete-rails', '~> 0.1.1', git: 'git://github.com/kristianmandrup/gmaps-autocomplete-rails.git'
+gem 'gmaps-autocomplete-rails', '~> 0.1.2', path: '/Users/kmandrup/private/repos/gmaps-autocomplete-rails' # git: 'git://github.com/kristianmandrup/gmaps-autocomplete-rails.git'
 
 gem 'rails3-jquery-autocomplete', git: 'git://github.com/kristianmandrup/rails3-jquery-autocomplete.git'
 
-# gem 'jquery_ui_rails_helpers'
+gem 'jquery_ui_rails_helpers', path: '/Users/kmandrup/private/repos/jquery-ui-rails-helpers'
 
 gem 'jquery-ui-bootstrap-rails', git: 'git://github.com/kristianmandrup/jquery-ui-bootstrap-rails.git'
 

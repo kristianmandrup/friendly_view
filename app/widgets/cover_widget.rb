@@ -6,6 +6,6 @@ class CoverWidget < Apotomo::Widget
   end
 
   def show
-    render
+    render view: 'show'
   end
 end

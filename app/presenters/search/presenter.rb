@@ -7,11 +7,23 @@ class Search
     # search form
     # location input + list of selectors
     def inputs_line num
-      s(location_input, selectors(line_selectors 1), show_results)
+      send "line_#{num}"
+    end
+
+    def location_input
+      search :location, t('properties.search.form.location.prompt')
     end
 
     def search_button form
       form.action :submit, :as => :button, label: t('search.form.button')
+    end
+
+    def slider_rooms
+      ui_select_slider :html => {:id => 'rooms', :class => 'slider rooms'}, :ui => {:labels => 5}, :labels => (1..5).to_a, :range => [1,3]      
+    end
+
+    def slider_size
+      ui_select_slider :html => {:id => 'size', :class => 'slider size'}, :ui => {:labels => 3}, :labels => (1..10).to_a.map{|v| v*10}, :range => [30,60]
     end
 
     protected
@@ -27,14 +39,14 @@ class Search
     end
 
     safe_content :line_1 do
-      [location_input, selectors_for(1)]
+      selectors_for(1)
     end
 
     safe_content :line_2 do
       selectors_for(2)
     end
 
-
+    # ui_select_slider :ui => {:labels => 7}, :labels => ['1', 2, 3], sliderOptions, :range => [1,3] do
     def selectors order
       order.map do |name|
         send("#{name}_selector")
@@ -42,7 +54,7 @@ class Search
     end
 
     def selectors_for num
-      selector line_selectors(num)
+      selectors line_selectors(num)
     end
 
     def line_selectors num
@@ -71,15 +83,11 @@ class Search
     end
 
     def base_options
-      {label: false, input_html: {class: 'span2'} }
-    end
-
-    def location_input
-      search :location, t('properties.search.form.location.prompt')
+      {label: false, input_html: {class: 'ui-widget'} }
     end
 
     def search name, placeholder
-      form.input name, base_options.merge(as: :search, :input_html => {class: 'span2', placeholder: placeholder})
+      form.input name, base_options.merge(as: :search, :input_html => {class: 'ui-widget', placeholder: placeholder})
     end
   end
 end
