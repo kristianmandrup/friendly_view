@@ -25,6 +25,7 @@
 //= require autocomplete-rails
 
 //= require gmaps-autocomplete
+//= require ui.select_slider.jquery
 
 //= require gallery/responsive
 

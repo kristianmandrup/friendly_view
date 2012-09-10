@@ -19,11 +19,11 @@ class Search
     end
 
     def slider_rooms
-      ui_select_slider :html => {:id => 'rooms', :class => 'slider rooms'}, :ui => {:labels => 5}, :labels => (1..5).to_a, :range => [1,3]      
+      ui_select_slider html: {id: 'rooms', class: 'slider rooms'}, ui: {labels: 5}, labels: (1..5).to_a, range: [1,3]
     end
 
     def slider_size
-      ui_select_slider :html => {:id => 'size', :class => 'slider size'}, :ui => {:labels => 3}, :labels => (1..10).to_a.map{|v| v*10}, :range => [30,60]
+      ui_select_slider html: {id: 'size', class: 'slider size'}, ui: {labels: 3}, labels: (1..10).to_a.map{|v| v*10}, range: [30,60]
     end
 
     protected

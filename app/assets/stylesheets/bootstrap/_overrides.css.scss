@@ -23,6 +23,13 @@ div.control-group {
   font-size: 0.8em;
 }
 
+a#handle_rooms_to .ui-slider-tooltip,
+a#handle_rooms_from .ui-slider-tooltip {
+  width: 1em !important;
+  margin-left: 0;
+}
+
+
 label,
 div.controls {
   display: inline-block;
