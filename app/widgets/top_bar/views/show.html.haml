@@ -1,11 +1,22 @@
 = widget_div do
   = semantic_form_for @search, :url => url_for_event(:submit), :remote => true do |form|
     = form.inputs do
+      / within 7 kms of
+      = @search_decorator.form(form).selector :radius
+      / Copenhagen
       = @search_decorator.form(form).location_input
     = form.inputs do
-        = @search_decorator.form(form).slider_rooms
-        = @search_decorator.form(form).slider_size
-    /   = @search_decorator.form(form).inputs_line 2
-  = @search_decorator.create_agent
-  = @search_decorator.show_results
+      / apartment, villa or house with 2-3 rooms and 100-200 m2 from 1.sep to 7. jan
+      - [:type, :rooms, :size, :period].each do |type|
+        = @search_decorator.form(form).selector type
+
+  .search_actions
+    = @search_decorator.create_agent
+    = @search_decorator.show_results
+
+  #landlord
+    = link_to 'rent your home'
+  #sort
+    = @search_decorator.form(form).selector :sort
+
 = render view: 'search'

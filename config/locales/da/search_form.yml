@@ -13,6 +13,7 @@ da:
           unit: 
         rooms:
           prompt: 'how many rooms'
+          prefix: with
           labels:
             - 1
             - 2
@@ -23,11 +24,14 @@ da:
           unit: rooms
         period:
           prompt: 'for how long'
+          prefix: from
           start_date: Start date
           end_date: End date
           next: Next
           previous: Prev
           done: Done
+          period_forward: 1year
+          period_back: 14days
         furnish:
           prompt: 'furnished or not'
           labels:
@@ -37,6 +41,7 @@ da:
           unit: furnished
         size:
           prompt: 'how large'
+          prefix: and
           labels:
             - 10
             - 20
@@ -46,6 +51,7 @@ da:
             - 120
           unit: m2
         cost:
+          prefix: costing
           prompt: 'how expensive'
           labels:
             - 2000
@@ -58,6 +64,7 @@ da:
           unit: DKK
         distance:
           prompt: 'how far away'
+          prefix: within
           labels:
             - 1
             - 2
@@ -67,3 +74,4 @@ da:
             - 50
             - 100
           unit: kms
+          postfix: of

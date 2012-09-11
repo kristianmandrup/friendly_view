@@ -5,6 +5,10 @@ class Search
 
   class << self
 
+    def sort_select
+      ['cost', 'size', 'cost/size', 'rooms']
+    end
+
     def type_select
       %w{house flat}
     end

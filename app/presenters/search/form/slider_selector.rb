@@ -1,13 +1,8 @@
 class Search
   module Form
     class SliderSelector < Selector
-      def initialize search, settings
-        @search = search
-        @settings = settings
-      end
-
       def label
-        "#{from} - #{to} #{unit}"
+        "#{prefix} #{from} - #{to} #{unit}"
       end
 
       def selector
@@ -42,10 +37,6 @@ class Search
 
       def html_options
         {id: name, class: "slider hidden"}
-      end
-
-      def unit
-        I18n.t("search.form.selector.#{name}.unit")
       end
     end
   end
