@@ -18,23 +18,15 @@ class Search
       form.action :submit, :as => :button, label: t('search.form.button')
     end
 
-    def slider_rooms
-      ui_select_slider html: {id: 'rooms', class: 'slider rooms'}, ui: {labels: 5}, labels: (1..5).to_a, range: [1,3]
-    end
-
-    def slider_size
-      ui_select_slider html: {id: 'size', class: 'slider size'}, ui: {labels: 3}, labels: (1..10).to_a.map{|v| v*10}, range: [30,60]
-    end
-
     protected
 
     safe_content :show_results do
       badge(search.results) + link_to('show results', '/properties')
     end
 
-    safe_content :show_results do
+    safe_content :create_agent do
       awesome_icon(:group) do
-        link_to('show results', '/properties')
+        link_to('crate agent', '/create_agent')
       end
     end
 

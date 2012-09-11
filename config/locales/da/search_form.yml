@@ -6,15 +6,64 @@ da:
           prompt:  'where are you moving'
         type:
           prompt: 'residence type'
+          labels:
+            - apartment
+            - house
+            - villa
+          unit: 
         rooms:
           prompt: 'how many rooms'
+          labels:
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6+
+          unit: rooms
         period:
-          prompt: 'for how long'          
+          prompt: 'for how long'
+          start_date: Start date
+          end_date: End date
+          next: Next
+          previous: Prev
+          done: Done
         furnish:
           prompt: 'furnished or not'
+          labels:
+            - not
+            - partly
+            - fully
+          unit: furnished
         size:
           prompt: 'how large'
+          labels:
+            - 10
+            - 20
+            - 40
+            - 60
+            - 90
+            - 120
+          unit: m2
         cost:
           prompt: 'how expensive'
+          labels:
+            - 2000
+            - 3000
+            - 4000
+            - 6000
+            - 9000
+            - 12000
+            - 16000+
+          unit: DKK
         distance:
           prompt: 'how far away'
+          labels:
+            - 1
+            - 2
+            - 5
+            - 10
+            - 20
+            - 50
+            - 100
+          unit: kms

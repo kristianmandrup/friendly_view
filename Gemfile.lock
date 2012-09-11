@@ -81,7 +81,7 @@ PATH
 PATH
   remote: /Users/kmandrup/private/repos/jquery-ui-rails-helpers
   specs:
-    jquery_ui_rails_helpers (0.1.4)
+    jquery_ui_rails_helpers (0.1.6)
       haml
 
 PATH
